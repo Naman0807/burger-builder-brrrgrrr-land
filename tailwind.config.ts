@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				burger: {
+					red: "#E53935",
+					brown: "#5D4037",
+					yellow: "#FFC107",
+					green: "#4CAF50",
+					beige: "#FFECB3"
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-light': {
+					'0%, 100%': { 
+						transform: 'translateY(-5%)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': { 
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-light': 'bounce-light 1.5s infinite'
 			}
 		}
 	},
